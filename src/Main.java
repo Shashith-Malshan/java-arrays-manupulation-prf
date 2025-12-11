@@ -2,8 +2,8 @@ import java.util.Arrays;
 
 public class Main {
 
-    //static String[] fruits={"apple","banana","orange"};
-    static String[] fruits=new String[0];
+    static String[] fruits={"apple","banana","orange"};
+    //static String[] fruits=new String[0];
 
     static void printFruits(){
         //System.out.println(Arrays.toString(fruits));
