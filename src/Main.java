@@ -34,6 +34,22 @@ public class Main {
         return -1;
     }
 
+    static void removeFruit(String fruit){
+        int index=getIndex(fruit);
+        if(index==-1){
+            return;
+        }
+        String[] tempAr= new String[fruits.length-1];
+        for (int i = 0; i < index; i++) {
+            tempAr[i]=fruits[i];
+        }
+        for (int i = index; i < fruits.length-1 ; i++) {
+            tempAr[i]=fruits[i+1];
+        }
+        fruits=tempAr;
+        printFruits();
+    }
+
 
 
 
@@ -43,6 +59,8 @@ public class Main {
         addFruit("mango");
 
         System.out.println(getIndex("orange"));
+
+        removeFruit("apple");
 
 
 
