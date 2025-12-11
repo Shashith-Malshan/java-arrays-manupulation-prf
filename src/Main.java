@@ -60,6 +60,21 @@ public class Main {
         printFruits();
     }
 
+    static public String[] vegetables={"carrot","cabbage","beans"};
+    static void mergeFruitsVegetables(){
+        String[] tempAr=new String[fruits.length+vegetables.length];
+
+        for (int i = 0; i < fruits.length ; i++) {
+            tempAr[i]=fruits[i];
+        }
+        for (int i = fruits.length; i < tempAr.length ; i++) {
+            tempAr[i]=vegetables[i- fruits.length];
+        }
+        fruits=tempAr;
+        printFruits();
+
+    }
+
 
 
 
@@ -75,6 +90,8 @@ public class Main {
         removeFruit("apple");
 
         printReverseFruits();
+
+        mergeFruitsVegetables();
 
 
 
