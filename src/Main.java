@@ -15,6 +15,16 @@ public class Main {
         System.out.println(fruits.length==0?"]":"\b\b]");
     }
 
+    static void printReverseFruits(){
+
+        System.out.print(fruits.length==0?"[null":"[");
+        for (int i = fruits.length-1; i >=0 ; i--) {
+            System.out.print(fruits[i]+", ");
+        }
+        System.out.println(fruits.length==0?"]":"\b\b]");
+    }
+
+
     static void addFruit(String fruit){
         String[] tempar=new String[fruits.length+1];
         for (int i = 0; i < fruits.length; i++) {
@@ -54,6 +64,8 @@ public class Main {
 
 
 
+
+
     public static void main(String[] args) {
         printFruits();
         addFruit("mango");
@@ -61,6 +73,8 @@ public class Main {
         System.out.println(getIndex("orange"));
 
         removeFruit("apple");
+
+        printReverseFruits();
 
 
 
