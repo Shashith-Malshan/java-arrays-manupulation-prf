@@ -25,11 +25,27 @@ public class Main {
         printFruits();
     }
 
+    static int getIndex(String fruit){
+        for (int i = 0; i < fruits.length ; i++) {
+            if (fruits[i].equalsIgnoreCase(fruit)){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+
+
 
 
     public static void main(String[] args) {
         printFruits();
         addFruit("mango");
+
+        System.out.println(getIndex("orange"));
+
+
+
 
     }
 }
