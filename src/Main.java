@@ -15,10 +15,21 @@ public class Main {
         System.out.println(fruits.length==0?"]":"\b\b]");
     }
 
+    static void addFruit(String fruit){
+        String[] tempar=new String[fruits.length+1];
+        for (int i = 0; i < fruits.length; i++) {
+            tempar[i]=fruits[i];
+        }
+        tempar[fruits.length]=fruit;
+        fruits=tempar;
+        printFruits();
+    }
+
 
 
     public static void main(String[] args) {
         printFruits();
+        addFruit("mango");
 
     }
 }
